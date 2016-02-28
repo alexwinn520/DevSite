@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" scroll ng-class="{min:boolChangeClass}">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
       <span class="sr-only">Toggle navigation</span>
@@ -8,13 +8,13 @@
     </button>
   </div>
 
-  <div class="collapse navbar-collapse col-sm-12 col-md-8 col-md-offset-2" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed = true">      
+  <div class="collapse navbar-collapse col-sm-12 col-md-6 col-md-offset-3" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed = true">      
     <ul class="nav navbar-nav navbar-left">
-      <li><a href="/#!/">HOME</a></li>
-      <li><a ng-href="/#!/about">ABOUT</a></li>
-      <li><a href="/#!/development">WEB DEVELOPMENT</a></li>
-      <li><a href="/#!/advertising">ADVERTISING</a></li>          
-      <li><a ng-href="/#!/contact">CONTACT</a></li> 
+      <li><a href="/#!/" ng-click="toTheTop()">HOME</a></li>
+      <li><a href="#About" du-smooth-scroll du-scrollspy id="aboutButton">ABOUT</a></li>
+      <li><a href="#Work" du-smooth-scroll du-scrollspy>WORK</a></li>
+      <li><a href="#Skills" du-smooth-scroll du-scrollspy>SKILLS</a></li>          
+      <li><a href="#Contact" du-smooth-scroll du-scrollspy>CONTACT</a></li> 
     </ul>
   </div>
 </nav>

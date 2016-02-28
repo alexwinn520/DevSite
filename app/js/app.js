@@ -1,20 +1,10 @@
 var app = angular.module('AlexApp', ['ngAnimate', 'ui.bootstrap', 'ngRoute', 'TypeView', 'duScroll']);
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-  //define routes
   $routeProvider
   .when('/', {
     templateUrl: '/views/home.html',
     controller: 'PageCtrl'
-  })
-  .when('/about', {
-    templateUrl: '/views/about.html'
-  })
-  .when('/development',{
-  	templateUrl:'views/development.html'
-  })
-  .when('/advertising',{
-    templateUrl:'views/advertising.html'
   })
   .otherwise({
     templateUrl: 'views/404.html'
@@ -24,22 +14,55 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
 }])
 .controller('PageCtrl', ['$scope', '$uibModal', '$document', function ($scope, $uibModal, $document) {
   $scope.navCollapsed = true;
-  
-    // var top = 400;
-    // var duration = 2000; //milliseconds
+  var duration = 1000;
 
-    // //Scroll to the exact position
-    // $document.scrollTop(top, duration).then(function() {
-    //   console && console.log('You just scrolled to the top!');
-    // });
+    $scope.toTheTop = function() {
+      $document.scrollTopAnimated(0, duration)
+    };
 
-    // var offset = 30; //pixels; adjust for floating menu, context etc
-    // //Scroll to #some-id with 30 px "padding"
-    // //Note: Use this in a directive, not with document.getElementById 
-    // var someElement = angular.element(document.getElementById('some-id'));
-    // $document.scrollToElement(someElement, offset, duration);
-}]);
+    $scope.toContact = function(){
+    var contact = angular.element(document.getElementById('Contact'));
+    $document.scrollToElement(contact, 0, duration);
+    };
 
+    var WAY = angular.element(document.getElementById("WAY"));
+    var WAYthumb = angular.element(document.getElementById("WAYthumb"));
+    var RR = angular.element(document.getElementById("RR"));
+    var RRthumb = angular.element(document.getElementById("RRthumb"));
+    var FF = angular.element(document.getElementById("FF"));
+    var FFthumb = angular.element(document.getElementById("FFthumb"));
+
+    WAYthumb.on('mouseover', (function(){
+      WAY.removeClass('hide').addClass('show')
+    })).on('mouseout', (function(){
+      WAY.removeClass('show').addClass('hide')
+    }));
+    RRthumb.on('mouseover', (function(){
+      RR.removeClass('hide').addClass('show')
+    })).on('mouseout', (function(){
+      RR.removeClass('show').addClass('hide')
+    }));
+    FFthumb.on('mouseover', (function(){
+      FF.removeClass('hide').addClass('show')
+    })).on('mouseout', (function(){
+      FF.removeClass('show').addClass('hide')
+    }));
+}])
+.directive("scroll", function ($window) {
+    return function(scope, element, attrs) {
+        angular.element($window).bind("scroll", function() {
+          var navi = angular.element(document.getElementsByClassName("navbar-fixed-top"));
+             if (this.pageYOffset >= 620) {
+                 scope.boolChangeClass = true;
+                 navi.removeClass('minfade').addClass('navSpy');;
+             } else if (navi.hasClass('navSpy')){
+                 scope.boolChangeClass = false;
+                 navi.addClass('minfade');
+             }
+            scope.$apply();
+        });
+    };
+});
 
 
 
