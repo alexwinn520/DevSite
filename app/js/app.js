@@ -63,15 +63,3 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         });
     };
 });
-
-
-
-
-// app.controller('HexCtrl', ['$scope', '$document', function($scope, $document){
-//  var hex = document.getElementsByClassName("hex")
-//   for(var i = 0; i < hex.length; i++){
-//     hex[i].onmouseover = function() {
-//         this.setAttribute("class", "hex animated flip");
-//     }
-//   } 
-// }]);
