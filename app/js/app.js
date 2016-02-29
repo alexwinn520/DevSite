@@ -47,6 +47,41 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     })).on('mouseout', (function(){
       FF.removeClass('show').addClass('hide')
     }));
+
+    
+    var mailDiv = angular.element(document.getElementById('mailDiv'));
+    var mailImg = angular.element(document.getElementById('mailImg'));
+    var mailP = angular.element(document.getElementById('mailP'));
+    var linkinDiv = angular.element(document.getElementById('linkinDiv'));
+    var linkinImg = angular.element(document.getElementById('linkinImg'));
+    var linkinP = angular.element(document.getElementById('linkinP'));
+    var gitDiv = angular.element(document.getElementById('gitDiv'));
+    var gitImg = angular.element(document.getElementById('gitImg'));
+    var gitP = angular.element(document.getElementById('gitP'));
+    var resumeDiv = angular.element(document.getElementById('resumeDiv'));
+    var resumeImg = angular.element(document.getElementById('resumeImg'));
+    var resumeP = angular.element(document.getElementById('resumeP'));
+    mailDiv.on('mouseover', function(){
+      mailDiv.addClass('fill') && mailImg.addClass('hide') && mailP.removeClass('hide').addClass('show');
+    }).on('mouseout', function(){
+      mailDiv.removeClass('fill') && mailImg.removeClass('hide') && mailP.removeClass('show').addClass('hide');
+    });
+    linkinDiv.on('mouseover', function(){
+      linkinDiv.addClass('fill') && linkinImg.addClass('hide') && linkinP.removeClass('hide').addClass('show');
+    }).on('mouseout', function(){
+      linkinDiv.removeClass('fill') && linkinImg.removeClass('hide') && linkinP.removeClass('show').addClass('hide');
+    });
+    gitDiv.on('mouseover', function(){
+      gitDiv.addClass('fill') && gitImg.addClass('hide') && gitP.removeClass('hide').addClass('show');
+    }).on('mouseout', function(){
+      gitDiv.removeClass('fill') && gitImg.removeClass('hide') && gitP.removeClass('show').addClass('hide');
+    });
+    resumeDiv.on('mouseover', function(){
+      resumeDiv.addClass('fill') && resumeImg.addClass('hide') && resumeP.removeClass('hide').addClass('show');
+    }).on('mouseout', function(){
+      resumeDiv.removeClass('fill') && resumeImg.removeClass('hide') && resumeP.removeClass('show').addClass('hide');
+    });
+
 }])
 .directive("scroll", function ($window) {
     return function(scope, element, attrs) {
