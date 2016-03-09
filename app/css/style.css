@@ -48,23 +48,13 @@ a.active,
     animation-fill-mode: forwards;
 }
 @-webkit-keyframes fade {
-  from {
-    background-color: transparent;
-  }
-
-  to {
-    background-color: rgba(60,60,60,0.9);
-  }
+  from {background-color: transparent;}
+  to {background-color: rgba(60,60,60,0.9);}
 }
 
 @keyframes fade {
-  from {
-    background-color: transparent;
-  }
-
-  to {
-    background-color: rgba(60,60,60,0.9);
-  }
+    from {background-color: transparent;}
+    to {background-color: rgba(60,60,60,0.9);}
 }
 .minfade{
     -webkit-animation-name: fadeBG;
@@ -75,22 +65,12 @@ a.active,
     animation-fill-mode: forwards;
 }
 @-webkit-keyframes fadeBG {
-  from {
-    background-color: rgba(60,60,60,0.9);
-  }
-
-  to {
-    background-color: transparent;
-  }
+    from {background-color: rgba(60,60,60,0.9);}
+    to {background-color: transparent;}
 }
 @keyframes fadeBG {
-  from {
-    background-color: rgba(60,60,60,0.9);
-  }
-
-  to {
-    background-color: transparent;
-  }
+    from {background-color: rgba(60,60,60,0.9);}
+    to {background-color: transparent;}
 }
 img.bg {
   min-height: 100%;
@@ -231,22 +211,12 @@ q: after{
     animation-fill-mode: forwards;
 }
 @-webkit-keyframes Show {
-  from {
-    opacity:0;
-  }
-
-  to {
-    opacity:1;
-  }
+    from {opacity:0;}
+    to {opacity:1;}
 }
 @keyframes Show {
-  from {
-    opacity:0;
-  }
-
-  to {
-    opacity:1;
-  }
+    from {opacity:0;}
+    to {opacity:1;}
 }
 .hide{  
     opacity: 0;
@@ -368,4 +338,3 @@ q: after{
     font-weight: 200;
     color: white;
 }
-.red

@@ -5,11 +5,13 @@ angular.module('appCtrl', [])
 //handle scroll home and scroll to contact
   var duration = 1000;
 
-    $scope.toTheTop = function() { //scroll home
+    //scroll home
+    $scope.toTheTop = function() { 
       $document.scrollTopAnimated(0, duration)
     };
 
-    $scope.toContact = function(){ //scroll to contact info
+    //scroll to contact info
+    $scope.toContact = function(){ 
     var contact = angular.element(document.getElementById('Contact'));
       $document.scrollToElement(contact, 0, duration);
     };
