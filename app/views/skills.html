@@ -1,45 +1,84 @@
 <section id="Skills">	
-	<div class="col-xs-10 col-sm-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+	<div class="col-xs-8 col-sm-8 col-md-6 col-xs-offset-2 col-sm-offset-2 col-md-offset-3" id="sectionHead">
 		<h2>SKILLS</h2>
-			<hr>
+		<hr>
+		<h4>HOVER OVER ICON FOR NAME</h4>
+	</div>
+		<div class="col-xs-10 col-sm-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
 			<div class="row">
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/HTML.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false">
+					<img src="/css/images/HTML.svg" ng-class="hovering ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering ? 'showP' : 'hide'">HTML5</p> 
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/CSS.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering1=true" ng-mouseleave="hovering1=false">
+					<img src="/css/images/CSS.svg" ng-class="hovering1 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering1 ? 'showP' : 'hide'">CSS3</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/JS.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering2=true" ng-mouseleave="hovering2=false">
+					<img src="/css/images/JS.svg" ng-class="hovering2 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering2 ? 'showP' : 'hide'">JAVASCRIPT</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/JQuery.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering3=true" ng-mouseleave="hovering3=false">
+					<img src="/css/images/JQuery.svg" ng-class="hovering3 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering3 ? 'showP' : 'hide'">JQUERY</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/Angular.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering4=true" ng-mouseleave="hovering4=false">
+					<img src="/css/images/Angular.svg" ng-class="hovering4 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering4 ? 'showP' : 'hide'">ANGULAR JS</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/Node.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering5=true" ng-mouseleave="hovering5=false">
+					<img src="/css/images/Node.svg" ng-class="hovering5 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering5 ? 'showP' : 'hide'">NODE JS</p>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/Ruby.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering6=true" ng-mouseleave="hovering6=false">
+					<img src="/css/images/Ruby.svg" ng-class="hovering6 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering6 ? 'showP' : 'hide'">RUBY</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/RubyOnRails.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering7=true" ng-mouseleave="hovering7=false">
+					<img src="/css/images/RubyOnRails.svg"ng-class="hovering7 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering7 ? 'showP' : 'hide'">RAILS</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/Mongo.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering8=true" ng-mouseleave="hovering8=false">
+					<img src="/css/images/Mongo.svg" ng-class="hovering8 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering8 ? 'showP' : 'hide'">MONGO DB</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/Postgresql.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering9=true" ng-mouseleave="hovering9=false">
+					<img src="/css/images/Postgresql.svg" ng-class="hovering9 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering9 ? 'showP' : 'hide'">POSTGRESQL</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/PS.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering10=true" ng-mouseleave="hovering10=false">
+					<img src="/css/images/PS.svg" ng-class="hovering10 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering10 ? 'showP' : 'hide'">PHOTOSHOP</p>
+					</div>
 				</div>
-				<div class="col-xs-2 logoHold">
-					<img src="/css/images/Ai.svg">
+				<div class="col-xs-2 logoHold" ng-mouseenter="hovering11=true" ng-mouseleave="hovering11=false">
+					<img src="/css/images/Ai.svg" ng-class="hovering11 ? 'flipOut' : 'flipIn'">
+					<div class="pContain">
+						<p ng-class="hovering11 ? 'showP' : 'hide'">ILLUSTRATOR</p>
+					</div>
 				</div>
 			</div>
 	</div>

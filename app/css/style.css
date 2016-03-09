@@ -1,3 +1,5 @@
+/************ Nav Bar **************/
+
 .navbar{
 	width:100%;
     background-color: transparent;
@@ -72,6 +74,9 @@ a.active,
     from {background-color: rgba(60,60,60,0.9);}
     to {background-color: transparent;}
 }
+
+/************ Home Section **************/
+
 img.bg {
   min-height: 100%;
   min-width: 1024px;
@@ -120,6 +125,9 @@ q: after{
     letter-spacing: 2px;
     font-weight: 300;
 }
+
+/************ About Section **************/
+
 #About{
     position: relative;
     background-color: white;
@@ -135,6 +143,9 @@ q: after{
 #About img{
     width: 100%;
 }
+
+/************ Work Section **************/
+
 #Work{
     background-color: gray;
     position: relative;
@@ -152,7 +163,7 @@ q: after{
     text-decoration: none;
 }
 #artDirector{
-    margin-top: 5%;
+    margin-top: 4%;
 }
 #artDirector h4{
     line-height: 24px;
@@ -162,11 +173,6 @@ q: after{
     margin-bottom: 40px;
     letter-spacing: 3px;
 }
-#sectionHead p{
-    font-weight: 200;
-    letter-spacing: 2px;
-    font-size: 70%;
-}
 #sectionHead h4{
     font-weight: 200;
     letter-spacing: 2px;
@@ -175,6 +181,7 @@ q: after{
 #sectionHead hr{
     margin-top: -10px;
     margin-bottom: 8px;
+    width: 80%;
 }
 .thumbs{
     background-color: rgb(40,40,40);
@@ -244,7 +251,7 @@ q: after{
     margin-right: 2%;
 }
 .CDbuttons{
-    margin-top: 10%;
+    margin-top: 8%;
 }
 #iMac{
     position: relative; 
@@ -256,34 +263,111 @@ q: after{
     top: 4.5%; 
     width:88%;
 }
+
+/************ Skills Section **************/
+
 #Skills{
     background-color: white;
     position: relative;
     height: 500px;
-    padding-top: 90px;
+    padding-top: 6%;
+    padding-bottom: 25%;
     top: 700px;
     color: gray;
-}
-#Skills h2{
-    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
 }
 #Skills hr{
-    width: 30%;
-    margin-top: -10px;
-    margin-bottom: 60px;
-    border: 1px solid gray;
+    border-color: gray;
 }
 #Skills img{
     display: inline-block;
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 .logoHold{
     padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 40px;
 }
+#Skills p{
+    padding-top: 15%;
+    font-size: 80%;
+    color: gray;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.pContain{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+@-webkit-keyframes showP {
+    from {opacity:0}
+    50% {opacity:0}
+    to {opacity:1}
+}
+@keyframes showP {
+    from {opacity:0}
+    50% {opacity:0}
+    to {opacity:1}
+}
+.showP{
+    -webkit-animation-name: showP;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: showP;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes flipOut {
+    from {transform: perspective(400px);}
+    30% {transform: perspective(400px) rotate3d(0, 1, 0, -15deg);  opacity: 1;}
+    to {transform: perspective(400px) rotate3d(0, 1, 0, 90deg);  opacity: 0;}
+}
+@-webkit-keyframes flipOut{
+    from {transform: perspective(400px);}
+    30% {transform: perspective(400px) rotate3d(0, 1, 0, -15deg);  opacity: 1;}
+    to {transform: perspective(400px) rotate3d(0, 1, 0, 90deg);  opacity: 0;}
+}
+.flipOut {
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: flipOut;
+    -webkit-animation-duration: .75s;
+    -webkit-animation-fill-mode: forwards;
+    backface-visibility: visible !important;
+    animation-name: flipOut;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+}
+@keyframes flipIn {
+    from {  transform: perspective(400px) rotate3d(0, 1, 0, 90deg);  animation-timing-function: ease-in;  opacity: 0;}
+    40% {  transform: perspective(400px) rotate3d(0, 1, 0, -20deg);  animation-timing-function: ease-in;}
+    60% {  transform: perspective(400px) rotate3d(0, 1, 0, 10deg);  opacity: 1;}
+    80% {  transform: perspective(400px) rotate3d(0, 1, 0, -5deg);}
+    to {  transform: perspective(400px);}
+}
+@-webkit-keyframes flipOut{
+    from {  transform: perspective(400px) rotate3d(0, 1, 0, 90deg);  animation-timing-function: ease-in;  opacity: 0;}
+    40% {  transform: perspective(400px) rotate3d(0, 1, 0, -20deg);  animation-timing-function: ease-in;}
+    60% {  transform: perspective(400px) rotate3d(0, 1, 0, 10deg);  opacity: 1;}
+    80% {  transform: perspective(400px) rotate3d(0, 1, 0, -5deg);}
+    to {  transform: perspective(400px);}
+}
+.flipIn {
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: flipIn;
+    -webkit-animation-duration: .75s;
+    -webkit-animation-fill-mode: forwards;
+    backface-visibility: visible !important;
+    animation-name: flipIn;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+}
+
+/************ Contact Section **************/
+
 #Contact{
     background-color: gray;
     position: relative;
