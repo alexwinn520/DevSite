@@ -28,13 +28,11 @@
 		<div class="col-xs-10 col-sm-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
 			<div class="col-xs-7" id="imgShow">
 				<img src="/css/images/iMacBlk.png" id="iMac">
-				<img src="/css/images/WAY.jpg" class="hide shownImg" id="WAY">
-				<img src="/css/images/RR.jpg" class="hide shownImg" id="RR">
-				<img src="/css/images/FF.jpg" class="hide shownImg" id="FF">	
+				<img ng-src="{{imgsrc}}" class="shownImg" ng-class="imgClass">
 			</div>
 			<div class="col-xs-1 spacer"></div>
 			<div class="col-xs-4">
-				<div id="WAYthumb" class="row thumbs">
+				<div class="row thumbs" ng-mouseenter="showBigImg(imgsrc='/css/images/WAY.jpg')" ng-mouseleave="hideBigImg()">
 					<h4>WHO ARE YA</h4>
 					<hr>
 					<p>AN ENGLISH PREMIER LEAGUE STATS GENERATOR, SCORE PREDICTOR AND FANZONE, UTILIZING MY OWN API.</p>
@@ -43,7 +41,7 @@
 						<a href="https://github.com/alexwinn520/Who_Are_Ya" class="codeButton">CODE</a>
 					</div>
 				</div>
-				<div id="RRthumb" class="row thumbs">
+				<div class="row thumbs" ng-mouseenter="showBigImg(imgsrc='/css/images/RR.jpg')" ng-mouseleave="hideBigImg()">
 					<h4>RENT RABBIT</h4>
 					<hr>
 					<p>A MARKETPLACE TO RENT USED ELECTRONICS. BUILT BY AN AWESOME TEAM OF 4: <a href="https://github.com/egervais7" class="innerA">ED GERVAIS</a>, <a href="https://github.com/jamesjchi" class="innerA">JAMES CHI</a>, <a href="https://github.com/s-d-c" class="innerA">SETH CHUTE</a> AND MYSELF.</p>
@@ -52,7 +50,7 @@
 						<a href="https://github.com/alexwinn520/rent-rabbit" class="codeButton">CODE</a>
 					</div>
 				</div>
-				<div id="FFthumb" class="row thumbs">
+				<div class="row thumbs" ng-mouseenter="showBigImg(imgsrc='/css/images/FF.jpg')" ng-mouseleave="hideBigImg()">
 					<h4>FOOD&FIT</h4>
 					<hr>
 					<p>NUTRITION INFO BUDDY AND WORKOUT ASSISTANT UTILIZING YOUTUBE'S API, A NUTRITION CALCULATOR AND NUTRITION API.</p>
@@ -122,27 +120,27 @@
 			<div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3" id="contactLogoHolder">
 			<div class="row">
 				<a href="mailto:alex.winn520@gmail.com">
-					<div class="col-xs-3 contactImgs" id="mailDiv">
-						<img src="/css/images/Email.svg" id="mailImg">
-						<p id="mailP" class="hide">EMAIL</p>
+					<div class="col-xs-3 contactImgs" ng-class="{'fill':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false">
+						<img src="/css/images/Email.svg" ng-class="{'hide':hovering}">
+						<p ng-class="hovering ? 'show' : 'hide'">EMAIL</p> 
 					</div>
 				</a>
-				<a href="https://www.linkedin.com/in/alex-winn-65091b4b">
-					<div class="col-xs-3 contactImgs" id="linkinDiv">
-						<img src="/css/images/LinkedIn.svg" id="linkinImg">
-						<p id="linkinP" class="hide">LINKEDIN</p>
+				<a href="https://www.linkedin.com/in/alexwinn520">
+					<div class="col-xs-3 contactImgs" ng-class="{'fill':hovering1}" ng-mouseenter="hovering1=true" ng-mouseleave="hovering1=false">
+						<img src="/css/images/LinkedIn.svg" ng-class="{'hide':hovering1}">
+						<p ng-class="hovering1 ? 'show' : 'hide'">LINKEDIN</p>
 					</div>
 				</a>
 				<a href="https://github.com/alexwinn520">
-					<div class="col-xs-3 contactImgs"  id="gitDiv">
-						<img src="/css/images/Github.svg" id="gitImg">
-						<p id="gitP" class="hide">GITHUB</p>
+					<div class="col-xs-3 contactImgs" ng-class="{'fill':hovering2}" ng-mouseenter="hovering2=true" ng-mouseleave="hovering2=false">
+						<img src="/css/images/Github.svg" ng-class="{'hide':hovering2}">
+						<p ng-class="hovering2 ? 'show' : 'hide'">GITHUB</p>
 					</div>
 				</a>
 				<a href="https://resume.creddle.io/resume/bn6cuz3xxp0">	
-					<div class="col-xs-3 contactImgs" id="resumeDiv">
-						<img src="/css/images/Resume.svg" id="resumeImg">
-						<p id="resumeP" class="hide">RESUME</p>
+					<div class="col-xs-3 contactImgs" ng-class="{'fill':hovering3}" ng-mouseenter="hovering3=true" ng-mouseleave="hovering3=false">
+						<img src="/css/images/Resume.svg" ng-class="{'hide':hovering3}">
+						<p ng-class="hovering3 ? 'show' : 'hide'">RESUME</p>
 					</div>
 				</a>
 			</div>
