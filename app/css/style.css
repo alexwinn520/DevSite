@@ -118,6 +118,7 @@ q: after{
     text-align: center;
     color: white; 
     position: fixed;
+    left: 0;
 }
 .typeContain p{
     font-size: 40px;
