@@ -153,7 +153,7 @@ q: after{
     height: auto;
     min-height: 800px;
     padding-top: 6%;
-    padding-bottom: 60%;
+    padding-bottom: 13%;
     top: 700px;
     text-align: center;
     color: white;
@@ -186,10 +186,13 @@ q: after{
 }
 .thumbs{
     background-color: rgb(40,40,40);
-    height: 150px;
-    margin-bottom: 12px;
+    height: 130px;
+    margin-bottom: 8px;
     padding-left: 5%;
     padding-right: 5%;
+}
+.twin{
+   padding: 0px;
 }
 .thumbs p,
 .thumbs h4{
@@ -230,7 +233,8 @@ q: after{
     opacity: 0;
 }
 .codeButton,
-.demoButton{
+.demoButton,
+.codeButtonCenter{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     font-weight: 200;
@@ -240,7 +244,11 @@ q: after{
     letter-spacing: 2px;
 }
 .codeButton:hover,
-.demoButton:hover{
+.demoButton:hover,
+.codeButtonCenter:hover,
+.codeButton:focus,
+.demoButton:focus,
+.codeButtonCenter:focus{
     border:1px solid skyblue;
     text-decoration: none;
     color: white;
@@ -252,7 +260,7 @@ q: after{
     margin-right: 2%;
 }
 .CDbuttons{
-    margin-top: 8%;
+    margin-top: 5%;
 }
 #iMac{
     position: relative; 
