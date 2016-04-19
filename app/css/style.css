@@ -74,7 +74,10 @@ a.active,
     from {background-color: rgba(60,60,60,0.9);}
     to {background-color: transparent;}
 }
-
+.collapsing, 
+.in {
+    background-color: rgba(60,60,60,0.9);
+}
 /************ Home Section **************/
 
 img.bg {
@@ -272,7 +275,9 @@ q: after{
     top: 4.5%; 
     width:88%;
 }
-
+.bottomSpacer{
+    height: 22px;
+}
 /************ Skills Section **************/
 
 #Skills{
